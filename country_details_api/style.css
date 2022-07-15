@@ -1,0 +1,36 @@
+.container .image {
+  margin: auto;
+  padding-top: 15px;
+}
+img {
+  width: 270px;
+  height: 180px;
+}
+body {
+  background: #000;
+  margin: 150px 400px 0px 400px;
+}
+.card {
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  border-radius: 3%;
+}
+
+.name {
+  margin: auto;
+}
+
+.below {
+  display: flex;
+  gap: 5rem;
+  margin: auto;
+}
+
+.cen {
+  text-align: center;
+}
+.countryName {
+  margin-top: 40px;
+  margin-left: 180px;
+}

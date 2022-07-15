@@ -1,0 +1,50 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #f5b041;
+  font-family: "Dancing Script", cursive;
+}
+
+html {
+  font-size: 22px;
+}
+
+.container {
+  text-align: center;
+}
+
+.dice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.dice img {
+  width: 200px;
+  height: 200px;
+}
+.text {
+  padding: 30px 0px;
+}
+.butto {
+  margin-top: 101px;
+  padding-left: 30px;
+}
+
+.butto {
+  display: grid;
+  justify-content: center;
+  gap: 1rem;
+}
+
+@media (max-width: 432px) {
+  .dice {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+  }
+}

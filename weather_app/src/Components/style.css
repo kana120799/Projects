@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  background: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 100vw;
+}
+
+.box {
+  top: 10px;
+  position: relative;
+  background-color: #a5bbdd;
+  min-width: 20rem;
+  min-height: 35rem;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.wave {
+  opacity: 0.3;
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  background: white;
+  width: 50rem;
+  height: 50rem;
+  margin-left: -25rem;
+  margin-top: -20rem;
+  border-radius: 43%;
+  animation: drift 5000ms infinite linear;
+  z-index: 5;
+}
+
+@keyframes drift {
+  from {
+    transform: rotate(0deg);
+  }
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 60vh;
+  z-index: 4;
+}
+.location {
+  margin-top: -5.5rem;
+  font-size: 2.6rem;
+  text-transform: capitalize;
+}
+/* Street view Animation*/
+.fa-street-view {
+  animation: rotates 1s linear infinite alternate;
+}
+@keyframes rotates {
+  from {
+    transform: translateX(-0.5rem);
+  }
+  from {
+    transform: translateX(-0.3rem);
+  }
+}
+
+.temp {
+  margin-top: 2rem;
+  font-size: 2.5rem;
+}
+
+.tempmin_max {
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #5d6d7e;
+}
+
+@media (max-width: 600px) {
+  .box {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .wave {
+    top: 85%;
+  }
+  .tempmin_max {
+    color: #17202a;
+  }
+}
+@media (max-height: 500px) {
+  .box {
+    height: 80vh;
+  }
+
+  .wave {
+    top: 115%;
+  }
+}
+
+.inputData {
+  margin-top: 15px;
+  display: flex;
+  width: 100%;
+}
+.inputField {
+  width: 75%;
+  margin: auto;
+  border-radius: 1.5rem;
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 1.4rem;
+}
+/* ==============   Error message when No city   ========= */
+.errorMsg {
+  text-align: center;
+  font-size: 2rem;
+  margin: 2rem auto;
+}
