@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+.main {
+  display: grid;
+  background-color: azure;
+}
+
+.box1 {
+  background-color: red;
+  grid-column: 1/-1;
+}
+.box2 {
+  background-color: yellow;
+}
+.box3 {
+  background-color: black;
+}
+.box4 {
+  background-color: blue;
+}
+.box5 {
+  background-color: grey;
+  grid-row: 2/4;
+  grid-column: 4/5;
+}
+.box6 {
+  background-color: pink;
+  grid-column: 1/4;
+}
+.box7 {
+  background-color: orange;
+  grid-row: 4;
+  grid-column: 1/-1;
+}
