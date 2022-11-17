@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!-- =================================== Navbar =========================================== -->
+    <nav class="navbar">
+      <img
+        style="height: 40px; width: 40px; margin: 0px 10px 0px 10px"
+        src="./Image/55.jpg"
+      />
+      Cafe
+    </nav>
+    <!-- =================================== End Navbar =========================================== -->
+
+    <div
+      style="
+        flex-direction: column;
+        background-color: #f6ddcc;
+        align-items: center;
+        height: auto;
+      "
+    >
+      <div class="choose">Choose Your Drink</div>
+      <div style="display: flex; flex-wrap: wrap">
+        <div style="display: flex">
+          <div>
+            <div class="tableBar">
+              <span style="margin-left: 10px">Product/Add-on</span
+              ><span style="margin-left: 50px">Milk</span
+              ><span style="margin-left: 20px">Cream</span
+              ><span style="margin-left: 13px; margin-right: 10px">Latte</span>
+            </div>
+            <div style="margin-left: 28px">
+              <table id="tableData"></table>
+            </div>
+          </div>
+          <!-- =================================== Amount Section Start =========================================== -->
+
+          <div style="display: flex; flex-direction: column">
+            <div
+              class="tableBar"
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Amount
+            </div>
+
+            <div style="margin-left: 25px">
+              <div style="margin: 5px 15px 0px 0px; display: flex">
+                <button
+                  style="color: red; height: 25px; width: 25px"
+                  onclick="ProductCount(0,`add`)"
+                >
+                  +
+                </button>
+
+                <div class="ProductButton" id="order0"></div>
+                <button
+                  onclick="ProductCount(0,`rem`)"
+                  style="color: red; height: 25px; width: 25px"
+                >
+                  -
+                </button>
+              </div>
+              <!-- ======== -->
+              <div style="margin-top: 5px; display: flex">
+                <button
+                  style="color: red; height: 25px; width: 25px"
+                  onclick="ProductCount(1,`add`)"
+                >
+                  +
+                </button>
+                <div class="ProductButton" id="order1"></div>
+
+                <button
+                  onclick="ProductCount(1,`rem`)"
+                  style="color: red; height: 25px; width: 25px"
+                >
+                  -
+                </button>
+              </div>
+              <!-- ======== -->
+
+              <div style="margin-top: 5px; display: flex">
+                <button
+                  style="color: red; height: 25px; width: 25px"
+                  onclick="ProductCount(2,`add`)"
+                >
+                  +
+                </button>
+                <div class="ProductButton" id="order2"></div>
+
+                <button
+                  style="color: red; height: 25px; width: 25px"
+                  onclick="ProductCount(2,`rem`)"
+                >
+                  -
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- =================================== Amount Section End =========================================== -->
+
+        <!-- ===================================Extra Add on Section Start =========================================== -->
+
+        <div class="dk12">
+          <div style="display: flex; flex-direction: column">
+            <div style="display: flex; flex-direction: column">
+              <div class="addon">Add On</div>
+              <div style="display: flex; font-size: 14px">
+                <div class="addonmilk">Milk</div>
+                <div class="addoncream">Cream</div>
+                <div class="addonlatte">Latte</div>
+              </div>
+            </div>
+
+            <div id="ppk" style="display: flex; flex-direction: column">
+              <!-- /////////////////////////////////// flex 1 Start    //////////////////////////////////////// -->
+
+              <div style="display: flex">
+                <div class="addonmilkbutton">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(0,`extraM`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraM0"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(0,`extraM`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ================= -->
+                <div style="margin: 15px 0px 0px 70px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(0,`extraC`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraC0"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(0,`extraC`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ======================== -->
+                <div style="margin: 15px 0px 0px 50px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(0,`extraL`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraL0"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(0,`extraL`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <!-- /////////////////////////////////// flex 1 ENd    //////////////////////////////////////// -->
+
+              <!-- /////////////////////////////////// flex 2 Start    //////////////////////////////////////// -->
+
+              <div style="display: flex">
+                <div class="addonmilkbutton1">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(1,`extraM`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraM1"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(1,`extraM`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ================= -->
+                <div style="margin: 5px 0px 0px 70px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(1,`extraC`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraC1"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(1,`extraC`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ======================== -->
+                <div style="margin: 5px 0px 0px 50px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(1,`extraL`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraL1"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(1,`extraL`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+
+              <!-- /////////////////////////////////// flex 2 Start    //////////////////////////////////////// -->
+
+              <!-- /////////////////////////////////// flex 3 Start    //////////////////////////////////////// -->
+
+              <div style="display: flex">
+                <div class="addonmilkbutton2">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(2,`extraM`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraM2"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(2,`extraM`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ================= -->
+                <div style="padding: 5px 0px 0px 70px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(2,`extraC`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraC2"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(2,`extraC`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+                <!-- ======================== -->
+                <div style="margin: 5px 0px 0px 50px; display: flex">
+                  <button
+                    style="color: red; height: 25px; width: 25px"
+                    onclick="ExtraProductCount(2,`extraL`,`add`)"
+                  >
+                    +
+                  </button>
+
+                  <div style="display: flex; flex-direction: column">
+                    <div
+                      id="extraL2"
+                      style="height: 15px; width: 15px; padding-left: 10px"
+                    ></div>
+                  </div>
+                  <button
+                    onclick="ExtraProductCount(2,`extraL`,`rem`)"
+                    style="color: red; height: 25px; width: 25px"
+                  >
+                    -
+                  </button>
+                </div>
+              </div>
+              <!-- /////////////////////////////////// flex 3 End    //////////////////////////////////////// -->
+            </div>
+          </div>
+        </div>
+        <!-- ===================================Extra Add on Section End =========================================== -->
+        <div class="dk13">
+          <div
+            style="
+              position: relative;
+              margin: 0px 0px 105px 100px;
+              height: 300px;
+              width: 300px;
+              border: 0.5px solid black;
+              border-radius: 5px;
+              background-color: #fff;
+            "
+          >
+            <h2
+              style="
+                display: flex;
+                align-items: center;
+                justify-content: center;
+              "
+            >
+              Bill Generated
+            </h2>
+
+            <h4
+              style="
+                display: flex;
+                justify-content: flex-end;
+                padding-right: 40px;
+              "
+            >
+              Add On
+            </h4>
+            <div
+              style="
+                margin: 0px 5px 0px 5px;
+                display: flex;
+                justify-content: space-between;
+              "
+            >
+              <div>
+                <span>Amount</span>
+                <span style="margin: 0px 5px 0px 5px">*</span>
+                <span>Products</span>
+              </div>
+              <div>
+                <span>Milk</span>
+                <span style="margin: 0px 5px 0px 5px">Cream</span>
+                <span>Latte</span>
+              </div>
+            </div>
+            <div style="display: flex; flex-direction: row">
+              <div
+                id="billRight"
+                style="display: flex; flex-direction: column; margin-top: 10px"
+              ></div>
+              <div
+                id="billLeft"
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  margin-left: 95px;
+                  margin-top: 10px;
+                "
+              ></div>
+            </div>
+            <div>
+              <button
+                id="generate"
+                style="
+                  position: absolute;
+                  bottom: 10px;
+                  right: 95px;
+                  height: 30px;
+                  width: 100px;
+                "
+                onclick="llpp()"
+              >
+                Generate Bill
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

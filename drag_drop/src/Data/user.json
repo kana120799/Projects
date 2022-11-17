@@ -1,0 +1,104 @@
+{
+  "data": [
+    {
+      "logo": "VP",
+      "companyName": "Godrej",
+      "iconClass": "fa-solid fa-table",
+      "userName": "Nitin Sharma",
+      "contact": "nitin@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "pending",
+        "btncolor": "warning"
+      },
+      "date": "Yesterday"
+    },
+    {
+      "logo": "CS",
+      "companyName": "HUL",
+      "iconClass": "fa-solid fa-phone",
+      "userName": "Kapish Singh",
+      "contact": "kapish.sing@gmail.com",
+      "paymentStatus": {
+        "payment": false,
+        "status": "not specified",
+        "btncolor": "light"
+      },
+      "date": "In 2 days"
+    },
+    {
+      "logo": "AB",
+      "companyName": "Tata & Son's",
+      "iconClass": "fa-solid fa-pen-nib",
+      "userName": "Niranjan thakur",
+      "contact": "niranjanthakur@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "failed",
+        "btncolor": "danger"
+      },
+      "date": "22/02/2021"
+    },
+    {
+      "logo": "JB",
+      "companyName": "Mahindra",
+      "iconClass": "fa-solid fa-cart-shopping",
+      "userName": "Ritesh Sharma",
+      "contact": "ritik.s@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "done",
+        "btncolor": "info"
+      },
+      "date": "22/02/2021"
+    },
+    {
+      "logo": "JW",
+      "companyName": "L & T",
+      "iconClass": "fa-solid fa-table",
+      "userName": "Abhishek Vaish",
+      "contact": "abhish.v@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "done",
+        "btncolor": "info"
+      },
+      "date": "22/02/2021"
+    },
+    {
+      "logo": "AF",
+      "companyName": "Cape Gemini",
+      "iconClass": "fa-solid fa-table",
+      "userName": "Ritviz",
+      "contact": "ritvu.08@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "done",
+        "btncolor": "info"
+      },
+      "date": "22/02/2021"
+    },
+    {
+      "logo": "AM",
+      "companyName": "Infosys",
+      "iconClass": "fa-solid fa-cart-shopping",
+      "userName": "Romit Singh",
+      "contact": "romi@gmail.com",
+      "paymentStatus": {
+        "payment": true,
+        "status": "done",
+        "btncolor": "info"
+      },
+      "date": "22/02/2021"
+    }
+  ],
+  "colorData": [
+    "#7171f2",
+    "#e09b1b",
+    "#ac4eac",
+    "#acac25",
+    "#4caf4c",
+    "#7171f2",
+    "#5d5def"
+  ]
+}
